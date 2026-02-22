@@ -11,7 +11,7 @@ module.exports = {
                 "brand-bg": "#FAF8F5",
                 "section-gray": "#F5F6F8",
                 "text-main": "#333333",
-                "text-muted": "#666666",
+                "text-muted": "#595959",
             },
             fontFamily: {
                 sans: ['"Heebo"', "sans-serif"],

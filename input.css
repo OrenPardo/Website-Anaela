@@ -94,7 +94,7 @@
   clip: auto;
 }
 
-/* Global focus-visible */
+/* Global focus-visible — dual-ring for 3:1 contrast on any background (WCAG 2.2 SC 2.4.11) */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -103,6 +103,7 @@ textarea:focus-visible,
 [tabindex]:focus-visible {
   outline: 2px solid #2A6B6B;
   outline-offset: 2px;
+  box-shadow: 0 0 0 4px #fff, 0 0 0 6px #2A6B6B;
 }
 
 /* Scroll margin for anchors */

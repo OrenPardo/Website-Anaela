@@ -244,7 +244,7 @@
         <div class="flex flex-col sm:flex-row items-center justify-center gap-6 text-lg">
           <a href="mailto:kotlag8@gmail.com"
              aria-label="שלחו מייל: kotlag8@gmail.com"
-             class="flex items-center gap-2 text-primary hover:text-primary-dark transition-colors font-medium min-h-[44px]">
+             class="flex items-center gap-2 text-primary hover:text-primary-dark transition-colors font-medium min-h-[44px] underline underline-offset-2">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"/>
             </svg>
@@ -252,7 +252,7 @@
           </a>
           <a href="tel:054-330-1177"
              aria-label="התקשרו אלינו: 054-330-1177"
-             class="flex items-center gap-2 text-primary hover:text-primary-dark transition-colors font-medium min-h-[44px]">
+             class="flex items-center gap-2 text-primary hover:text-primary-dark transition-colors font-medium min-h-[44px] underline underline-offset-2">
             <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"/>
             </svg>
@@ -268,7 +268,7 @@
   <footer class="bg-white border-t border-gray-200 py-6 px-6" role="contentinfo">
     <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-text-muted">
       <p>&copy; <span id="year"></span> אנאלה — כל הזכויות שמורות.</p>
-      <a href="#accessibility-statement" class="text-primary hover:text-primary-dark transition-colors font-medium min-h-[44px] flex items-center">
+      <a href="#accessibility-statement" class="text-primary hover:text-primary-dark transition-colors font-medium min-h-[44px] flex items-center underline underline-offset-2">
         הצהרת נגישות
       </a>
     </div>
@@ -286,22 +286,39 @@
         </button>
       </div>
       <div class="text-text-muted leading-relaxed space-y-4">
-        <p>אנאלה מחויבת להנגשת האתר לאנשים עם מוגבלויות, בהתאם לתקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), התשע״ג-2013, ובהתאם לתקן הישראלי ת״י 5568 המבוסס על הנחיות <span lang="en" dir="ltr">WCAG 2.2</span> ברמה <span lang="en" dir="ltr">AA</span>.</p>
-        <h3 class="text-lg font-bold text-gray-900">פעולות שביצענו</h3>
+        <p>אנאלה מחויבת להנגשת האתר לאנשים עם מוגבלויות, בהתאם לחוק שוויון זכויות לאנשים עם מוגבלות, התשנ״ח-1998, תקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), התשע״ג-2013, ובהתאם לתקן הישראלי ת״י 5568 המבוסס על הנחיות <span lang="en" dir="ltr">WCAG 2.2</span> ברמה <span lang="en" dir="ltr">AA</span>.</p>
+
+        <h3 class="text-lg font-bold text-gray-900">רמת הנגישות</h3>
+        <p>אתר זה עומד בדרישות תקן ת״י 5568 ברמה AA, הכוללות בין היתר: ניגודיות צבעים מספקת, ניווט מקלדת מלא, תמיכה בטכנולוגיות מסייעות ומבנה סמנטי תקין.</p>
+
+        <h3 class="text-lg font-bold text-gray-900">פעולות הנגשה שבוצעו</h3>
         <ul class="list-disc pr-6 space-y-1" role="list">
           <li>מבנה סמנטי עם תגיות HTML תקניות (כותרות, קישורים, רשימות, אזורי ציון דרך)</li>
-          <li>ניווט מלא באמצעות מקלדת עם מיקוד נראה</li>
+          <li>ניווט מלא באמצעות מקלדת עם מחוון מיקוד נראה בכל רכיב אינטראקטיבי</li>
           <li>קישור דילוג לתוכן הראשי</li>
           <li>תמיכה בקוראי מסך ותוויות ARIA מתאימות</li>
-          <li>ניגודיות צבעים בהתאם לתקן AA (יחס 4.5:1 לטקסט רגיל)</li>
-          <li>תמיכה בהגדלת טקסט עד 200%</li>
-          <li>כיבוד הגדרות הנפשה מופחתת (<span lang="en" dir="ltr">prefers-reduced-motion</span>)</li>
+          <li>ניגודיות צבעים בהתאם לתקן AA — יחס 4.5:1 לפחות לטקסט רגיל, 3:1 לטקסט גדול ולמחווני מיקוד</li>
+          <li>קישורים מסומנים בקו תחתון ולא בצבע בלבד</li>
+          <li>תמיכה בהגדלת טקסט עד 200% ללא אובדן תוכן או תפקוד</li>
+          <li>כיבוד הגדרת הנפשה מופחתת (<span lang="en" dir="ltr">prefers-reduced-motion</span>)</li>
+          <li>אזורי לחיצה בגודל מינימלי של 44×44 פיקסלים</li>
           <li>תוכן מותאם לכיוון ימין-לשמאל (RTL)</li>
         </ul>
-        <h3 class="text-lg font-bold text-gray-900">יצירת קשר בנושא נגישות</h3>
-        <p>אם נתקלת בבעיית נגישות באתר, נשמח לסייע. ניתן לפנות אלינו:</p>
-        <p>טלפון: <a href="tel:054-330-1177" class="text-primary hover:text-primary-dark font-medium">054-330-1177</a><br>
-        דוא״ל: <a href="mailto:kotlag8@gmail.com" class="text-primary hover:text-primary-dark font-medium">kotlag8@gmail.com</a></p>
+
+        <h3 class="text-lg font-bold text-gray-900">מגבלות ידועות</h3>
+        <p>למרות המאמצים להנגיש את כלל רכיבי האתר, ייתכן שחלקים מסוימים אינם מונגשים באופן מלא. אנו ממשיכים לפעול לשיפור הנגישות באופן שוטף.</p>
+
+        <h3 class="text-lg font-bold text-gray-900">רכז/ת נגישות</h3>
+        <p>לפניות בנושא נגישות ניתן לפנות לרכזת הנגישות:</p>
+        <p>טלפון: <a href="tel:054-330-1177" class="text-primary hover:text-primary-dark font-medium underline underline-offset-2">054-330-1177</a><br>
+        דוא״ל: <a href="mailto:kotlag8@gmail.com" class="text-primary hover:text-primary-dark font-medium underline underline-offset-2">kotlag8@gmail.com</a></p>
+
+        <h3 class="text-lg font-bold text-gray-900">הגשת תלונה</h3>
+        <p>אם נתקלת בבעיית נגישות באתר ולא קיבלת מענה מספק, ניתן לפנות לנציבות שוויון זכויות לאנשים עם מוגבלויות:</p>
+        <p>טלפון: <a href="tel:*6763" class="text-primary hover:text-primary-dark font-medium underline underline-offset-2" dir="ltr">*6763</a><br>
+        אתר: <a href="https://www.gov.il/he/departments/units/commission-equal-rights-persons-disabilities" target="_blank" rel="noopener noreferrer" class="text-primary hover:text-primary-dark font-medium underline underline-offset-2">נציבות שוויון זכויות לאנשים עם מוגבלויות</a></p>
+
+        <p class="text-sm pt-2 border-t border-gray-200">הצהרה זו עודכנה לאחרונה בתאריך: <time datetime="2026-02-22">22 בפברואר 2026</time></p>
       </div>
     </div>
   </dialog>
