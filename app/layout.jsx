@@ -67,12 +67,6 @@ export default function RootLayout({ children }) {
   return (
     <html lang="he" dir="rtl" className={`scroll-smooth ${heebo.variable}`}>
       <head>
-        <link
-          rel="preload"
-          as="image"
-          href="/images/hero-bg.webp"
-          type="image/webp"
-        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -8,19 +8,6 @@
 ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #555; }
 
-/* ── Hero ─────────────────────────────────────────────────────────────── */
-.hero-bg {
-  position: relative;
-  background: url('/images/hero-bg.webp') center center / cover no-repeat;
-  overflow: hidden;
-}
-.hero-bg::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-}
-
 /* Golden circle accent */
 .hero-circle {
   position: absolute;

@@ -1,11 +1,22 @@
+import Image from 'next/image';
 import { PHONE } from '../lib/constants';
 
 export default function Hero() {
   return (
     <section
-      className="hero-bg min-h-screen flex items-center justify-center px-6 relative"
+      className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden"
       aria-labelledby="hero-heading"
     >
+      <Image
+        src="/images/hero-bg.webp"
+        alt=""
+        fill
+        priority
+        className="object-cover object-center"
+        sizes="100vw"
+        aria-hidden="true"
+      />
+      <div className="absolute inset-0 bg-black/45" aria-hidden="true" />
       <div className="hero-circle" aria-hidden="true"></div>
 
       <div className="relative z-10 max-w-3xl text-center fade-in-up">
