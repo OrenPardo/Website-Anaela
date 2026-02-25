@@ -1,4 +1,5 @@
 import { Heebo } from 'next/font/google';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import '../styles/globals.css';
 import SkipLink from './components/SkipLink';
 import Footer from './components/Footer';
@@ -84,6 +85,7 @@ export default function RootLayout({ children }) {
           {children}
         </main>
         <Footer />
+        <SpeedInsights />
       </body>
     </html>
   );
