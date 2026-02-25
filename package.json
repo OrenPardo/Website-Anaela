@@ -2,22 +2,23 @@
   "name": "project-anaela",
   "version": "1.0.0",
   "description": "Anaela — Portfolio & Landing Page",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "build": "npx tailwindcss -i ./input.css -o ./public/tailwind.css --minify",
-    "build:css": "npx tailwindcss -i ./input.css -o ./public/tailwind.css",
-    "watch:css": "npx tailwindcss -i ./input.css -o ./public/tailwind.css --watch"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "engines": {
     "node": ">=18.0.0"
   },
   "dependencies": {
-    "compression": "^1.8.1",
-    "express": "^4.21.2",
-    "helmet": "^8.1.0"
+    "next": "^14.2.29",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.5.3",
     "tailwindcss": "^3.4.19"
   }
 }

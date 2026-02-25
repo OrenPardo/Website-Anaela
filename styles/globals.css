@@ -2,13 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom scrollbar (Webkit browsers) */
-::-webkit-scrollbar { width: 8px; }
+/* Custom scrollbar (Webkit) */
+::-webkit-scrollbar       { width: 8px; }
 ::-webkit-scrollbar-track { background: #f1f1f1; }
 ::-webkit-scrollbar-thumb { background: #888; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #555; }
 
-/* Hero section */
+/* ── Hero ─────────────────────────────────────────────────────────────── */
 .hero-bg {
   position: relative;
   background: url('/images/hero-bg.webp') center center / cover no-repeat;
@@ -30,33 +30,29 @@
   width: 380px;
   height: 380px;
   border-radius: 50%;
-  background: linear-gradient(160deg, rgba(196, 163, 90, 0.35) 0%, rgba(196, 163, 90, 0.08) 100%);
+  background: linear-gradient(160deg, rgba(196,163,90,0.35) 0%, rgba(196,163,90,0.08) 100%);
   filter: blur(1px);
+  pointer-events: none;
 }
-
 @media (min-width: 768px) {
-  .hero-circle {
-    width: 500px;
-    height: 500px;
-  }
+  .hero-circle { width: 500px; height: 500px; }
 }
 
-/* Hero fade-in animation */
+/* ── Scroll animations ────────────────────────────────────────────────── */
 .fade-in-up {
-  animation: fadeInUp 1s ease-out forwards;
+  animation: fadeInUp 0.8s ease-out forwards;
   opacity: 0;
   transform: translateY(20px);
 }
 @keyframes fadeInUp {
   to { opacity: 1; transform: translateY(0); }
 }
-
-/* Stagger children */
+/* Stagger direct children of animated hero container */
 .fade-in-up > *:nth-child(1) { animation-delay: 0.1s; }
 .fade-in-up > *:nth-child(2) { animation-delay: 0.3s; }
 .fade-in-up > *:nth-child(3) { animation-delay: 0.5s; }
 
-/* WCAG — Skip link (visible on focus) */
+/* ── Skip link (WCAG) ─────────────────────────────────────────────────── */
 .skip-link {
   position: absolute;
   width: 1px;
@@ -64,7 +60,7 @@
   padding: 0;
   margin: -1px;
   overflow: hidden;
-  clip: rect(0, 0, 0, 0);
+  clip: rect(0,0,0,0);
   white-space: nowrap;
   border: 0;
   z-index: 100;
@@ -88,7 +84,7 @@
   clip: auto;
 }
 
-/* Global focus-visible — dual-ring for 3:1 contrast on any background (WCAG 2.2 SC 2.4.11) */
+/* ── Focus indicator (WCAG 2.2 SC 2.4.11 — 3:1 contrast minimum) ─────── */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible,
@@ -100,38 +96,32 @@ textarea:focus-visible,
   box-shadow: 0 0 0 4px #fff, 0 0 0 6px #2A6B6B;
 }
 
-/* Scroll margin for anchors */
-:target,
+/* ── Scroll margin (sections & anchor targets only) ───────────────────── */
 section,
-[tabindex],
-a,
-button,
-input,
-select,
-textarea {
-  scroll-margin-top: 6rem;
+:target {
+  scroll-margin-top: 2rem;
 }
 
-/* Feature card hover */
+/* ── Feature card hover ───────────────────────────────────────────────── */
 .feature-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .feature-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
 }
 
-/* Accessibility statement dialog */
+/* ── Accessibility dialog ─────────────────────────────────────────────── */
 .a11y-dialog {
   max-width: 640px;
   width: calc(100% - 2rem);
   border: none;
   border-radius: 1rem;
   padding: 0;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.15);
 }
 .a11y-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0,0,0,0.5);
 }
 .a11y-dialog-content {
   padding: 2rem;
@@ -139,22 +129,14 @@ textarea {
   overflow-y: auto;
 }
 
-/* Respect prefers-reduced-motion */
+/* ── Respect prefers-reduced-motion ──────────────────────────────────── */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
+  *, *::before, *::after {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-  .fade-in-up {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
-  .feature-card:hover {
-    transform: none;
-  }
+  .fade-in-up         { animation: none; opacity: 1; transform: none; }
+  .feature-card:hover { transform: none; }
 }

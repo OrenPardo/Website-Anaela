@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./public/**/*.html"],
+    content: ["./app/**/*.{js,jsx}"],
     theme: {
         extend: {
             colors: {
@@ -11,7 +11,7 @@ module.exports = {
                 "text-muted": "#595959",
             },
             fontFamily: {
-                sans: ['"Heebo"', "sans-serif"],
+                sans: ["var(--font-heebo)", "Heebo", "sans-serif"],
             },
         },
     },
